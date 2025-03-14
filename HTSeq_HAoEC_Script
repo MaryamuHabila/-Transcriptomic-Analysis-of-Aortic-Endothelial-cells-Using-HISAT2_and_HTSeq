@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# Define paths
+GTF="/datastore/home/genomes/igenomes/Homo_sapiens/UCSC/hg38/Annotation/Archives/archive-2015-08-14-08-18-15/Genes/genes.gtf"
+OUTPUT_DIR="REVERSE_Hisat2_HAoECs"  # Updated output directory
+THREADS=8  # Adjust based on available resources
+
+# Step 1: Create a list of sorted BAM files in the OUTPUT_DIR
+BAM_FILES=$(ls "$OUTPUT_DIR"/*sorted.bam)
+
+# Step 2: Run HTSeq for each BAM file
+for BAM_FILE in $BAM_FILES
+do
+    SAMPLE_NAME=$(basename "$BAM_FILE" .sorted.bam)  # Get sample name from BAM file name
+    echo "Running HTSeq-count for sample: $SAMPLE_NAME"
+    
+    # Run HTSeq-count for gene quantification with reverse strandedness
+    htseq-count -f bam -r pos -s reverse -t exon -i gene_id "$BAM_FILE" "$GTF" > "$OUTPUT_DIR/${SAMPLE_NAME}_counts.txt"
+    
+    # Check if HTSeq output file was created successfully
+    if [ ! -s "$OUTPUT_DIR/${SAMPLE_NAME}_counts.txt" ]; then
+        echo "Error: HTSeq count file for $SAMPLE_NAME is empty. Check logs." | tee -a "$OUTPUT_DIR/htseq_errors.log"
+    else
+        echo "HTSeq-count completed for sample: $SAMPLE_NAME"
+    fi
+done
+
+echo "HTSeq quantification completed for all samples."
