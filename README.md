@@ -1,0 +1,2 @@
+# -Transcriptomic-Analysis-of-Aortic-Endothelial-cells-Using-HISAT2_and_HTSeq
+ This guide provides a step-by-step explanation of an RNA-Seq analysis pipeline for beginners using HISAT2 for read alignment and HTSeq for gene quantification. It covers essential preprocessing steps, including quality control, adapter trimming, alignment, and read counting, explaining the purpose and output of each step.
