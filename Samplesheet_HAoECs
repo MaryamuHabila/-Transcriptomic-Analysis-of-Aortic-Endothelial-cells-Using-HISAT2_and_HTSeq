@@ -1,0 +1,9 @@
+sample,fastq_1,fastq_2,strandedness
+C1_311,/home/s2451842/HAoECs_raw_fastq/C1_311_1.fq.gz,/home/s2451842/HAoECs_raw_fastq/C1_311_2.fq.gz,reverse
+C2_212,/home/s2451842/HAoECs_raw_fastq/C2_212_1.fq.gz,/home/s2451842/HAoECs_raw_fastq/C2_212_2.fq.gz,reverse
+C2_312,/home/s2451842/HAoECs_raw_fastq/C2_312_1.fq.gz,/home/s2451842/HAoECs_raw_fastq/C2_312_2.fq.gz,reverse
+C3_212,/home/s2451842/HAoECs_raw_fastq/C3_212_1.fq.gz,/home/s2451842/HAoECs_raw_fastq/C3_212_2.fq.gz,reverse
+LD2_212,/home/s2451842/HAoECs_raw_fastq/LD2_212_1.fq.gz,/home/s2451842/HAoECs_raw_fastq/LD2_212_2.fq.gz,reverse
+LD2_312,/home/s2451842/HAoECs_raw_fastq/LD2_312_1.fq.gz,/home/s2451842/HAoECs_raw_fastq/LD2_312_2.fq.gz,reverse
+LD3_212,/home/s2451842/HAoECs_raw_fastq/LD3_212_1.fq.gz,/home/s2451842/HAoECs_raw_fastq/LD3_212_2.fq.gz,reverse
+LD3_312,/home/s2451842/HAoECs_raw_fastq/LD3_312_1.fq.gz,/home/s2451842/HAoECs_raw_fastq/LD3_312_2.fq.gz,reverse
